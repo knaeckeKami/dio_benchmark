@@ -2,7 +2,7 @@
 
 A simple benchmark for improved dio transformers.
 
-Takes advantage of a hidden `Convert` that we get when fusing utf8 with json.
+Takes advantage of a hidden `Converter` that we get when fusing utf8 with json.
 see https://github.com/dart-lang/sdk/blob/5b2ea0c7a227d91c691d2ff8cbbeb5f7f86afdb9/sdk/lib/_internal/vm/lib/convert_patch.dart#L54 
 
 Example on AOT:
