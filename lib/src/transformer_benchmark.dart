@@ -1,4 +1,3 @@
-
 import 'dart:typed_data';
 
 import 'package:benchmark_harness/benchmark_harness.dart';
@@ -33,8 +32,7 @@ class TransformerBenchmark extends AsyncBenchmarkBase {
   }
 
   @override
-  Future<void> teardown()async {
+  Future<void> teardown() async {
     dio.close();
   }
 }
-

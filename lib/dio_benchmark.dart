@@ -52,7 +52,8 @@ Future<List<BenchMarkResult>> _runBenchmarks(List<String> fileNames) async {
 }
 
 Table _createTable(List<BenchMarkResult> results) {
-  final nf = NumberFormat.decimalPatternDigits(locale: 'en_US', decimalDigits: 2);
+  final nf =
+      NumberFormat.decimalPatternDigits(locale: 'en_US', decimalDigits: 2);
   return Table(
       header: TableSection(rows: [
         Row(cellStyle: CellStyle(paddingRight: 1), cells: [
@@ -70,9 +71,11 @@ Table _createTable(List<BenchMarkResult> results) {
                       style: CellStyle(alignment: TextAlignment.MiddleRight)),
                   Cell(nf.format(e.optimizedTime),
                       style: CellStyle(alignment: TextAlignment.MiddleRight)),
-                  Cell(nf.format((e.syncTime / e.optimizedTime),),
+                  Cell(
+                      nf.format(
+                        (e.syncTime / e.optimizedTime),
+                      ),
                       style: CellStyle(alignment: TextAlignment.MiddleRight))
                 ]))
       ]));
 }
-
